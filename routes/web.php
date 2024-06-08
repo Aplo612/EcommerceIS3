@@ -3,8 +3,8 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('service.dimephar');
+})->name('dimephar');
 
 Route::middleware([
     'auth:sanctum',
@@ -12,6 +12,6 @@ Route::middleware([
     'verified',
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+        return view('service.dimephar');
+    });
 });
