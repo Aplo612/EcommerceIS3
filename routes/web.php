@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -15,3 +17,6 @@ Route::middleware([
         return view('service.dimephar');
     });
 });
+
+Route::get('/products/{product}', [ProductController::class, 'show'])->name('product.show');
+Route::post('/cart/add/{product}', [CartController::class, 'addToCart'])->name('cart.add');

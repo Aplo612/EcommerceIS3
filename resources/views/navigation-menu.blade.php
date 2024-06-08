@@ -20,6 +20,7 @@
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ml-6" @click.away="dropdownOpen = false">
                 @auth
+                    <livewire:cart-count />
                     <div class="ml-3 relative" @click="dropdownOpen = ! dropdownOpen">
                         <div>
                             <button class="max-w-xs bg-white flex items-center text-sm rounded-full focus:outline-none focus:shadow-solid" id="user-menu" aria-label="User menu" aria-haspopup="true">
