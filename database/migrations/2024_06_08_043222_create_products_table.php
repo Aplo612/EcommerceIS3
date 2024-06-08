@@ -15,6 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->text('description');
+            $table->text('long_description')->nullable();
+            $table->text('composition')->nullable();
+            $table->text('instructions')->nullable();
+            $table->text('warning')->nullable();
             $table->decimal('price', 8, 2);
             $table->unsignedBigInteger('category_id')->nullable();
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('set null');

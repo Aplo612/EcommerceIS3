@@ -6,6 +6,7 @@ use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Faker\Factory as Faker;
 
 class ProductSeeder extends Seeder
 {
@@ -14,10 +15,16 @@ class ProductSeeder extends Seeder
      */
     public function run(): void
     {
+        $faker = Faker::create();
+
         $products = [
             [
                 'name' => 'Paracetamol 500mg',
                 'description' => 'Alivia el dolor y reduce la fiebre.',
+                'long_description' => $faker->paragraph,
+                'composition' => $faker->paragraph,
+                'instructions' => $faker->paragraph,
+                'warning' => $faker->paragraph,
                 'price' => 2.99,
                 'category_id' => Category::where('name', 'Medicamentos')->first()->id,
                 'stock' => 100,
@@ -25,6 +32,10 @@ class ProductSeeder extends Seeder
             [
                 'name' => 'Ibuprofeno 400mg',
                 'description' => 'Antiinflamatorio y analgésico.',
+                'long_description' => $faker->paragraph,
+                'composition' => $faker->paragraph,
+                'instructions' => $faker->paragraph,
+                'warning' => $faker->paragraph,
                 'price' => 4.50,
                 'category_id' => Category::where('name', 'Medicamentos')->first()->id,
                 'stock' => 80,
@@ -32,6 +43,10 @@ class ProductSeeder extends Seeder
             [
                 'name' => 'Amoxicilina 500mg',
                 'description' => 'Antibiótico de amplio espectro.',
+                'long_description' => $faker->paragraph,
+                'composition' => $faker->paragraph,
+                'instructions' => $faker->paragraph,
+                'warning' => $faker->paragraph,
                 'price' => 12.99,
                 'category_id' => Category::where('name', 'Medicamentos')->first()->id,
                 'stock' => 50,
@@ -39,6 +54,10 @@ class ProductSeeder extends Seeder
             [
                 'name' => 'Vitamina C 1000mg',
                 'description' => 'Suplemento dietético para el sistema inmune.',
+                'long_description' => $faker->paragraph,
+                'composition' => $faker->paragraph,
+                'instructions' => $faker->paragraph,
+                'warning' => $faker->paragraph,
                 'price' => 8.99,
                 'category_id' => Category::where('name', 'Vitaminas')->first()->id,
                 'stock' => 50,
@@ -46,6 +65,10 @@ class ProductSeeder extends Seeder
             [
                 'name' => 'Multivitamínico',
                 'description' => 'Complejo vitamínico para la salud general.',
+                'long_description' => $faker->paragraph,
+                'composition' => $faker->paragraph,
+                'instructions' => $faker->paragraph,
+                'warning' => $faker->paragraph,
                 'price' => 15.99,
                 'category_id' => Category::where('name', 'Vitaminas')->first()->id,
                 'stock' => 40,
@@ -53,6 +76,10 @@ class ProductSeeder extends Seeder
             [
                 'name' => 'Omega 3 1000mg',
                 'description' => 'Suplemento dietético para la salud cardiovascular.',
+                'long_description' => $faker->paragraph,
+                'composition' => $faker->paragraph,
+                'instructions' => $faker->paragraph,
+                'warning' => $faker->paragraph,
                 'price' => 12.99,
                 'category_id' => Category::where('name', 'Suplementos')->first()->id,
                 'stock' => 75,
@@ -60,6 +87,10 @@ class ProductSeeder extends Seeder
             [
                 'name' => 'Proteína Whey',
                 'description' => 'Suplemento proteico para el crecimiento muscular.',
+                'long_description' => $faker->paragraph,
+                'composition' => $faker->paragraph,
+                'instructions' => $faker->paragraph,
+                'warning' => $faker->paragraph,
                 'price' => 29.99,
                 'category_id' => Category::where('name', 'Suplementos')->first()->id,
                 'stock' => 25,
@@ -74,6 +105,10 @@ class ProductSeeder extends Seeder
             [
                 'name' => 'Alcohol en Gel 70%',
                 'description' => 'Desinfectante de manos.',
+                'long_description' => $faker->paragraph,
+                'composition' => $faker->paragraph,
+                'instructions' => $faker->paragraph,
+                'warning' => $faker->paragraph,
                 'price' => 3.50,
                 'category_id' => Category::where('name', 'Cuidado Personal')->first()->id,
                 'stock' => 200,
@@ -81,6 +116,10 @@ class ProductSeeder extends Seeder
             [
                 'name' => 'Jabón Antibacterial',
                 'description' => 'Jabón de manos con propiedades antibacterianas.',
+                'long_description' => $faker->paragraph,
+                'composition' => $faker->paragraph,
+                'instructions' => $faker->paragraph,
+                'warning' => $faker->paragraph,
                 'price' => 2.99,
                 'category_id' => Category::where('name', 'Cuidado Personal')->first()->id,
                 'stock' => 150,
@@ -88,6 +127,10 @@ class ProductSeeder extends Seeder
             [
                 'name' => 'Crema Hidratante',
                 'description' => 'Crema para mantener la piel hidratada.',
+                'long_description' => $faker->paragraph,
+                'composition' => $faker->paragraph,
+                'instructions' => $faker->paragraph,
+                'warning' => $faker->paragraph,
                 'price' => 7.99,
                 'category_id' => Category::where('name', 'Cuidado Personal')->first()->id,
                 'stock' => 60,
@@ -95,6 +138,10 @@ class ProductSeeder extends Seeder
             [
                 'name' => 'Protector Solar SPF 50',
                 'description' => 'Protección solar de amplio espectro.',
+                'long_description' => $faker->paragraph,
+                'composition' => $faker->paragraph,
+                'instructions' => $faker->paragraph,
+                'warning' => $faker->paragraph,
                 'price' => 10.99,
                 'category_id' => Category::where('name', 'Cuidado Personal')->first()->id,
                 'stock' => 40,
@@ -102,6 +149,10 @@ class ProductSeeder extends Seeder
             [
                 'name' => 'Termómetro Digital',
                 'description' => 'Termómetro de alta precisión para medir la temperatura corporal.',
+                'long_description' => $faker->paragraph,
+                'composition' => $faker->paragraph,
+                'instructions' => $faker->paragraph,
+                'warning' => $faker->paragraph,
                 'price' => 15.99,
                 'category_id' => Category::where('name', 'Equipos Médicos')->first()->id,
                 'stock' => 30,
@@ -109,6 +160,10 @@ class ProductSeeder extends Seeder
             [
                 'name' => 'Oxímetro de Pulso',
                 'description' => 'Dispositivo para medir la saturación de oxígeno en la sangre.',
+                'long_description' => $faker->paragraph,
+                'composition' => $faker->paragraph,
+                'instructions' => $faker->paragraph,
+                'warning' => $faker->paragraph,
                 'price' => 25.99,
                 'category_id' => Category::where('name', 'Equipos Médicos')->first()->id,
                 'stock' => 20,
@@ -116,6 +171,10 @@ class ProductSeeder extends Seeder
             [
                 'name' => 'Tensiómetro Digital',
                 'description' => 'Dispositivo para medir la presión arterial.',
+                'long_description' => $faker->paragraph,
+                'composition' => $faker->paragraph,
+                'instructions' => $faker->paragraph,
+                'warning' => $faker->paragraph,
                 'price' => 45.99,
                 'category_id' => Category::where('name', 'Equipos Médicos')->first()->id,
                 'stock' => 15,
@@ -123,6 +182,10 @@ class ProductSeeder extends Seeder
             [
                 'name' => 'Bastón Ortopédico',
                 'description' => 'Bastón ajustable para soporte y equilibrio.',
+                'long_description' => $faker->paragraph,
+                'composition' => $faker->paragraph,
+                'instructions' => $faker->paragraph,
+                'warning' => $faker->paragraph,
                 'price' => 19.99,
                 'category_id' => Category::where('name', 'Equipos Médicos')->first()->id,
                 'stock' => 10,
@@ -130,6 +193,10 @@ class ProductSeeder extends Seeder
             [
                 'name' => 'Silla de Ruedas',
                 'description' => 'Silla de ruedas plegable para movilidad.',
+                'long_description' => $faker->paragraph,
+                'composition' => $faker->paragraph,
+                'instructions' => $faker->paragraph,
+                'warning' => $faker->paragraph,
                 'price' => 199.99,
                 'category_id' => Category::where('name', 'Equipos Médicos')->first()->id,
                 'stock' => 5,
@@ -137,6 +204,10 @@ class ProductSeeder extends Seeder
             [
                 'name' => 'Mascarilla Quirúrgica',
                 'description' => 'Mascarilla de protección para uso médico.',
+                'long_description' => $faker->paragraph,
+                'composition' => $faker->paragraph,
+                'instructions' => $faker->paragraph,
+                'warning' => $faker->paragraph,
                 'price' => 0.50,
                 'category_id' => Category::where('name', 'Equipos Médicos')->first()->id,
                 'stock' => 500,
@@ -144,6 +215,10 @@ class ProductSeeder extends Seeder
             [
                 'name' => 'Gasa Estéril',
                 'description' => 'Gasa para curaciones y heridas.',
+                'long_description' => $faker->paragraph,
+                'composition' => $faker->paragraph,
+                'instructions' => $faker->paragraph,
+                'warning' => $faker->paragraph,
                 'price' => 1.99,
                 'category_id' => Category::where('name', 'Equipos Médicos')->first()->id,
                 'stock' => 200,
@@ -151,6 +226,10 @@ class ProductSeeder extends Seeder
             [
                 'name' => 'Venda Elástica',
                 'description' => 'Venda para soporte y compresión.',
+                'long_description' => $faker->paragraph,
+                'composition' => $faker->paragraph,
+                'instructions' => $faker->paragraph,
+                'warning' => $faker->paragraph,
                 'price' => 2.99,
                 'category_id' => Category::where('name', 'Equipos Médicos')->first()->id,
                 'stock' => 150,
@@ -158,6 +237,10 @@ class ProductSeeder extends Seeder
             [
                 'name' => 'Jarabe para la Tos',
                 'description' => 'Jarabe expectorante para aliviar la tos.',
+                'long_description' => $faker->paragraph,
+                'composition' => $faker->paragraph,
+                'instructions' => $faker->paragraph,
+                'warning' => $faker->paragraph,
                 'price' => 6.99,
                 'category_id' => Category::where('name', 'Medicamentos')->first()->id,
                 'stock' => 80,
@@ -165,6 +248,10 @@ class ProductSeeder extends Seeder
             [
                 'name' => 'Loratadina 10mg',
                 'description' => 'Antihistamínico para alergias.',
+                'long_description' => $faker->paragraph,
+                'composition' => $faker->paragraph,
+                'instructions' => $faker->paragraph,
+                'warning' => $faker->paragraph,
                 'price' => 3.99,
                 'category_id' => Category::where('name', 'Medicamentos')->first()->id,
                 'stock' => 120,
@@ -172,6 +259,10 @@ class ProductSeeder extends Seeder
             [
                 'name' => 'Aspirina 100mg',
                 'description' => 'Antiinflamatorio y analgésico.',
+                'long_description' => $faker->paragraph,
+                'composition' => $faker->paragraph,
+                'instructions' => $faker->paragraph,
+                'warning' => $faker->paragraph,
                 'price' => 4.99,
                 'category_id' => Category::where('name', 'Medicamentos')->first()->id,
                 'stock' => 90,
@@ -179,6 +270,10 @@ class ProductSeeder extends Seeder
             [
                 'name' => 'Suero Oral',
                 'description' => 'Solución oral para la rehidratación.',
+                'long_description' => $faker->paragraph,
+                'composition' => $faker->paragraph,
+                'instructions' => $faker->paragraph,
+                'warning' => $faker->paragraph,
                 'price' => 5.99,
                 'category_id' => Category::where('name', 'Medicamentos')->first()->id,
                 'stock' => 70,
@@ -186,6 +281,10 @@ class ProductSeeder extends Seeder
             [
                 'name' => 'Vendas Adhesivas',
                 'description' => 'Vendas adhesivas para pequeñas heridas.',
+                'long_description' => $faker->paragraph,
+                'composition' => $faker->paragraph,
+                'instructions' => $faker->paragraph,
+                'warning' => $faker->paragraph,
                 'price' => 2.50,
                 'category_id' => Category::where('name', 'Cuidado Personal')->first()->id,
                 'stock' => 100,
@@ -193,6 +292,10 @@ class ProductSeeder extends Seeder
             [
                 'name' => 'Enjuague Bucal',
                 'description' => 'Enjuague bucal para una higiene completa.',
+                'long_description' => $faker->paragraph,
+                'composition' => $faker->paragraph,
+                'instructions' => $faker->paragraph,
+                'warning' => $faker->paragraph,
                 'price' => 4.99,
                 'category_id' => Category::where('name', 'Cuidado Personal')->first()->id,
                 'stock' => 50,
@@ -200,6 +303,10 @@ class ProductSeeder extends Seeder
             [
                 'name' => 'Shampoo Anticaspa',
                 'description' => 'Shampoo para el control de la caspa.',
+                'long_description' => $faker->paragraph,
+                'composition' => $faker->paragraph,
+                'instructions' => $faker->paragraph,
+                'warning' => $faker->paragraph,
                 'price' => 6.99,
                 'category_id' => Category::where('name', 'Cuidado Personal')->first()->id,
                 'stock' => 40,
@@ -207,6 +314,10 @@ class ProductSeeder extends Seeder
             [
                 'name' => 'Gotas para los Ojos',
                 'description' => 'Solución oftálmica para aliviar la irritación ocular.',
+                'long_description' => $faker->paragraph,
+                'composition' => $faker->paragraph,
+                'instructions' => $faker->paragraph,
+                'warning' => $faker->paragraph,
                 'price' => 7.99,
                 'category_id' => Category::where('name', 'Medicamentos')->first()->id,
                 'stock' => 60,
@@ -214,6 +325,10 @@ class ProductSeeder extends Seeder
             [
                 'name' => 'Pañales para Adultos',
                 'description' => 'Pañales desechables para adultos.',
+                'long_description' => $faker->paragraph,
+                'composition' => $faker->paragraph,
+                'instructions' => $faker->paragraph,
+                'warning' => $faker->paragraph,
                 'price' => 14.99,
                 'category_id' => Category::where('name', 'Equipos Médicos')->first()->id,
                 'stock' => 30,
@@ -221,6 +336,10 @@ class ProductSeeder extends Seeder
             [
                 'name' => 'Tiritas Adhesivas',
                 'description' => 'Tiritas para pequeñas cortaduras y raspones.',
+                'long_description' => $faker->paragraph,
+                'composition' => $faker->paragraph,
+                'instructions' => $faker->paragraph,
+                'warning' => $faker->paragraph,
                 'price' => 1.50,
                 'category_id' => Category::where('name', 'Cuidado Personal')->first()->id,
                 'stock' => 200,
@@ -228,6 +347,10 @@ class ProductSeeder extends Seeder
             [
                 'name' => 'Crema Analgésica',
                 'description' => 'Crema para el alivio del dolor muscular.',
+                'long_description' => $faker->paragraph,
+                'composition' => $faker->paragraph,
+                'instructions' => $faker->paragraph,
+                'warning' => $faker->paragraph,
                 'price' => 5.99,
                 'category_id' => Category::where('name', 'Cuidado Personal')->first()->id,
                 'stock' => 80,

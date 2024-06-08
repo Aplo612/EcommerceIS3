@@ -38,10 +38,18 @@
                         {{ __('Forgot your password?') }}
                     </a>
                 @endif
-
-                <x-button class="ms-4">
-                    {{ __('Log in') }}
-                </x-button>
+            </div>
+            <div class="flex items-center justify-between mt-4">
+                <div class="flex items-center">
+                    <a href="{{ route('register') }}" class="px-4 py-2 border border-gray-300 text-gray-600 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        {{ __('Register') }}
+                    </a>
+                </div>
+                <div class="flex items-center">
+                    <x-button class="ms-4">
+                        {{ __('Log in') }}
+                    </x-button>
+                </div>
             </div>
         </form>
     </x-authentication-card>
